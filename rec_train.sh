@@ -1,0 +1,1 @@
+python tools/train.py -c configs/rec/CRNN_ctc.yml 2>&1 | tee train_rec.log

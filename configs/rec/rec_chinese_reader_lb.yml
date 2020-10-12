@@ -1,0 +1,17 @@
+TrainReader:
+  reader_function: ppocr.data.rec.dataset_traversal,SimpleReader
+  num_workers: 1    # 8
+  # img_set_dir: ./train_data
+  # label_file_path: ./train_data/rec_gt_train.txt
+  img_set_dir: ../dataset/rec_data
+  label_file_path: ../dataset/rec_data/train.txt
+  
+EvalReader:
+  reader_function: ppocr.data.rec.dataset_traversal,SimpleReader
+  # img_set_dir: ./train_data
+  # label_file_path: ./train_data/rec_gt_test.txt
+  img_set_dir: ../dataset/rec_data
+  label_file_path: ../dataset/rec_data/val.txt
+
+TestReader:
+  reader_function: ppocr.data.rec.dataset_traversal,SimpleReader

@@ -1,0 +1,5 @@
+下载预训练检测模型的方式（很多时候下载路径均为下面这个）：
+https://paddleocr.bj.bcebos.com/name.tar
+
+本地路径：
+E:/Paddle_project/saved_model/PaddleOCR/pretrain_weights

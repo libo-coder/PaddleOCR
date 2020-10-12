@@ -1,0 +1,5 @@
+下载预训练识别模型的方式：
+https://paddleocr.bj.bcebos.com/ch_models/name.tar
+
+本地路径：
+E:/Paddle_project/saved_model/PaddleOCR/pretrain_models

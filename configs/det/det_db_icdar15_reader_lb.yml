@@ -1,0 +1,28 @@
+TrainReader:
+  reader_function: ppocr.data.det.dataset_traversal,TrainReader
+  process_function: ppocr.data.det.db_process,DBProcessTrain
+  num_workers: 8    # win:1, 8
+  # img_set_dir: ../dataset/icdar2015/text_localization/         # ./train_data/icdar2015/text_localization/
+  img_set_dir: E:/Dataset/det_dataset/icdar2015/text_localization/         # ./train_data/icdar2015/text_localization/
+  # label_file_path: ../dataset/icdar2015/text_localization//train_icdar2015_label.txt
+  label_file_path: E:/Dataset/det_dataset/icdar2015/text_localization/train_icdar2015_label.txt
+
+EvalReader:
+  reader_function: ppocr.data.det.dataset_traversal,EvalTestReader
+  process_function: ppocr.data.det.db_process,DBProcessTest
+  # img_set_dir: ../dataset/icdar2015/text_localization/
+  img_set_dir: E:/Dataset/det_dataset/icdar2015/text_localization/
+  # label_file_path: ../dataset/icdar2015/text_localization/test_icdar2015_label.txt
+  label_file_path: E:/Dataset/det_dataset/icdar2015/text_localization/test_icdar2015_label.txt
+  test_image_shape: [736, 1280]
+  
+TestReader:
+  reader_function: ppocr.data.det.dataset_traversal,EvalTestReader
+  process_function: ppocr.data.det.db_process,DBProcessTest
+  infer_img:
+  # img_set_dir: ../dataset/icdar2015/text_localization/
+  img_set_dir: .E:/Dataset/det_dataset/icdar2015/text_localization/
+  # label_file_path: ../dataset/icdar2015/text_localization/test_icdar2015_label.txt
+  label_file_path: E:/Dataset/det_dataset/icdar2015/text_localization/test_icdar2015_label.txt
+  test_image_shape: [736, 1280]
+  do_eval: True
